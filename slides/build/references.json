@@ -1,0 +1,128 @@
+{
+  "references": [
+    {
+      "id": 1,
+      "fact": "古诺 1838 年出版《财富理论的数学原理研究》，首次用函数与微分分析卖者的竞争，书中以矿泉水双寡头为例",
+      "sources": [
+        {
+          "source": "Internet Archive 全文",
+          "locator": "Bacon 1897 英译本卷首",
+          "evidence": "His Principes mathématiques having met with little or no success, in 1863 he paraphrased it in popular language"
+        },
+        {
+          "source": "维基百科 Cournot competition",
+          "locator": "History",
+          "evidence": "first outlined his theory of competition in his 1838 volume ... describing the competition with a market for spring water dominated by two suppliers (a duopoly)"
+        }
+      ],
+      "kind": "direct",
+      "status": "已出版著作"
+    },
+    {
+      "id": 2,
+      "fact": "古诺生于 1801 年，卒于 1877 年",
+      "sources": [
+        {
+          "source": "HandWiki: Antoine Augustin Cournot",
+          "locator": "首段",
+          "evidence": "Born 28 August 1801 ... Died 31 March 1877"
+        }
+      ],
+      "kind": "direct",
+      "status": "传记资料"
+    },
+    {
+      "id": 3,
+      "fact": "线性需求 p=a−bQ、边际成本 c 下，双寡头反应函数 q₁=(a−c−bq₂)/2b，均衡 q₁*=q₂*=(a−c)/3b，p*=(a+2c)/3",
+      "sources": [],
+      "kind": "calculated",
+      "status": "按模型假设推导",
+      "derivation": "π₁=[a−b(q₁+q₂)−c]q₁，对 q₁ 求偏导得 a−c−2bq₁−bq₂=0；对称解 q=(a−c)/3b，代入需求得 p=a−2(a−c)/3=(a+2c)/3。"
+    },
+    {
+      "id": 4,
+      "fact": "垄断、古诺双寡头、完全竞争的行业总产量分别为 (a−c)/2b、2(a−c)/3b、(a−c)/b，价格加成分别为 (a−c)/2、(a−c)/3、0",
+      "sources": [],
+      "kind": "calculated",
+      "status": "按模型假设推导",
+      "derivation": "垄断：max (a−bQ−c)Q 得 Q=(a−c)/2b；完全竞争 p=c 得 Q=(a−c)/b；与 [3] 对照。"
+    },
+    {
+      "id": 5,
+      "fact": "伯特兰 1883 年发表书评，批评古诺模型应以价格而非产量为厂商的选择变量",
+      "sources": [
+        {
+          "source": "用户消息以外的通识",
+          "locator": "",
+          "evidence": "Bertrand, J. (1883), Journal des Savants 书评"
+        }
+      ],
+      "kind": "direct",
+      "status": "教科书通行叙述，未在本轮联网核对"
+    },
+    {
+      "id": 6,
+      "fact": "霍特林 1929、张伯伦 1933、斯塔克尔伯格 1934 分别在位置差异、产品差异化、先后决策方向上改造寡头模型",
+      "sources": [],
+      "kind": "direct",
+      "status": "教科书通行叙述，未在本轮联网核对"
+    },
+    {
+      "id": 7,
+      "fact": "n 家同成本厂商的古诺均衡：行业总产量 n(a−c)/[(n+1)b]，价格高于成本 (a−c)/(n+1)",
+      "sources": [],
+      "kind": "calculated",
+      "status": "按模型假设推导",
+      "derivation": "对称均衡下 a−c−b(n+1)q=0，得 q=(a−c)/[(n+1)b]，Q=nq，p−c=a−bQ−c=(a−c)/(n+1)。"
+    },
+    {
+      "id": 8,
+      "fact": "推测变差形式下每家均衡产量 q=(a−c)/[(3+v)b]；v=0 为古诺，v=1 时行业产量等于垄断产量",
+      "sources": [],
+      "kind": "calculated",
+      "status": "按模型假设推导",
+      "derivation": "令 q₂=q+v q₁ 代入一阶条件 a−c−2bq₁−bq₂−bq₁ dq₂/dq₁=0，对称解 q(3+v)=(a−c)/b。"
+    },
+    {
+      "id": 9,
+      "fact": "1897 年古诺著作英译本出版，Nathaniel T. Bacon 翻译，Irving Fisher 编制数理经济学文献目录；原书在古诺生前收效甚微，1863 年以通俗语言重写",
+      "sources": [
+        {
+          "source": "Internet Archive 全文",
+          "locator": "卷首译序",
+          "evidence": "TRANSLATED BY NATHANIEL T. BACON / BIBLIOGRAPHY OF MATHEMATICAL ECONOMICS / BY IRVING FISHER / 1897"
+        },
+        {
+          "source": "Internet Archive 全文",
+          "locator": "卷首译序",
+          "evidence": "His Principes mathématiques having met with little or no success, in 1863 he paraphrased it in popular language"
+        }
+      ],
+      "kind": "direct",
+      "status": "已出版著作"
+    },
+    {
+      "id": 10,
+      "fact": "纳什 1950 年提出非合作博弈均衡概念，古诺均衡被视为纳什均衡的早期特例",
+      "sources": [],
+      "kind": "direct",
+      "status": "教科书通行叙述，未在本轮联网核对"
+    },
+    {
+      "id": 11,
+      "fact": "1960 年代 Fouraker 与 Siegel 等人在实验室中检验寡头（产量与价格）竞争",
+      "sources": [
+        {
+          "source": "斯坦福 Alvin Roth 实验经济学史页面",
+          "locator": "A. Industrial organization",
+          "evidence": "Fouraker, Lawrence E., Martin Shubik, and Sidney Siegel. 1961. Oligopoly Bargaining: The Quantity Adjuster Models ... Fouraker, Lawrence E. and Sidney Siegel. 1963. Bargaining Behavior"
+        }
+      ],
+      "kind": "direct",
+      "status": "已发表研究"
+    }
+  ],
+  "gaps": [
+    "伯特兰 1883 年书评、霍特林 1929、张伯伦 1933、斯塔克尔伯格 1934、纳什 1950 的具体出处为教科书通行说法，本轮未逐条联网核对。"
+  ]
+}
