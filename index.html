@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>产业组织理论 · 以知识创造为主线</title>
+<meta name="description" content="产业组织理论课程主页：十一条线索的知识地图、十六讲讲次、六步知识创造方法、导论课《古诺模型》课件与全部教学材料。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="产业组织理论 · 以知识创造为主线">
+<meta property="og:description" content="四条已有线索，七条补上的线索；六个动作；十六讲；一套可复现的教学材料。">
+<meta property="og:image" content="https://youxuels.github.io/industrial-economics/assets/cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%23221f1a'/><text x='32' y='45' font-size='33' text-anchor='middle' fill='%23e8dcc8' font-family='serif'>产</text></svg>">
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<style>
+/* ===== 基础变量 ===== */
+:root{
+  --paper:#f8f5ef;
+  --paper-deep:#f0ece3;
+  --ink:#1d1b17;
+  --ink-soft:#3a362f;
+  --muted:#6f6960;
+  --line:#ddd6c9;
+  --line-strong:#c9c0af;
+  --accent:#8c3a2b;
+  --accent-soft:#b8624f;
+  --green:#2f4a45;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",STSong,SimSun,serif;
+  --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --max:1080px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--serif);
+  font-size:17px;
+  line-height:1.9;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+img{display:block;max-width:100%}
+a{color:inherit}
+::selection{background:#e4d3c9;color:var(--ink)}
+
+/* ===== 顶栏 ===== */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(248,245,239,.86);
+  backdrop-filter:saturate(140%) blur(12px);
+  -webkit-backdrop-filter:saturate(140%) blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-inner{
+  max-width:var(--max);margin:0 auto;
+  padding:0 28px;
+  height:58px;display:flex;align-items:center;gap:22px;
+}
+.brand{
+  font-family:var(--sans);font-size:14px;font-weight:500;letter-spacing:.14em;
+  color:var(--ink);text-decoration:none;white-space:nowrap;
+}
+.brand span{color:var(--accent)}
+.nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{
+  font-family:var(--sans);font-size:13.5px;color:var(--muted);text-decoration:none;
+  padding:6px 11px;border-radius:2px;white-space:nowrap;
+  border-bottom:1px solid transparent;transition:color .25s;
+}
+.nav a:hover{color:var(--ink)}
+.nav a[aria-current="true"]{color:var(--accent);border-bottom-color:var(--accent)}
+.nav a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* ===== 首屏 ===== */
+.hero{
+  position:relative;overflow:hidden;
+  border-bottom:1px solid var(--line);
+  background:#231f1a;
+}
+.hero-img{
+  position:absolute;inset:0;
+  background:url("assets/cover.jpg") center 38%/cover no-repeat;
+  filter:grayscale(.22) contrast(.94);
+  transform:scale(1.02);
+}
+.hero-scrim{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(180deg,rgba(20,17,13,.30) 0%,rgba(20,17,13,.52) 46%,rgba(20,17,13,.88) 100%),
+    radial-gradient(120% 80% at 78% 22%,rgba(20,17,13,0) 0%,rgba(20,17,13,.55) 100%);
+}
+.hero-inner{
+  position:relative;z-index:2;
+  max-width:var(--max);margin:0 auto;
+  padding:118px 28px 84px;
+  color:#f6f1e6;
+}
+.eyebrow{
+  font-family:var(--sans);font-size:12.5px;letter-spacing:.32em;text-transform:uppercase;
+  color:#d8c9b6;margin:0 0 26px;
+}
+.hero h1{
+  margin:0;
+  font-size:clamp(38px,7.4vw,78px);
+  line-height:1.08;
+  font-weight:600;
+  letter-spacing:.02em;
+}
+.hero h1 em{
+  display:block;font-style:normal;
+  font-size:clamp(17px,2.5vw,23px);
+  font-weight:400;letter-spacing:.1em;
+  color:#e4d5c1;margin-top:22px;line-height:1.7;
+}
+.hero-lead{
+  max-width:640px;margin:34px 0 0;
+  font-size:16.5px;line-height:2.0;color:#efe6d8;
+  border-left:2px solid rgba(216,201,182,.5);padding-left:20px;
+}
+.meta{
+  display:flex;flex-wrap:wrap;gap:10px;margin-top:46px;
+  font-family:var(--sans);font-size:12.5px;letter-spacing:.06em;
+}
+.meta span{
+  border:1px solid rgba(240,231,216,.34);
+  padding:5px 13px;border-radius:999px;color:#ece1cf;
+}
+
+/* ===== 通用版式 ===== */
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+section{padding:86px 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:none}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:14px}
+.sec-num{
+  font-family:var(--sans);font-size:12px;letter-spacing:.2em;color:var(--accent);
+  border-top:1px solid var(--accent);padding-top:8px;min-width:78px;white-space:nowrap;flex:none;
+}
+h2{
+  margin:0;
+  font-size:clamp(26px,3.4vw,34px);font-weight:600;line-height:1.36;letter-spacing:.01em;
+}
+.sec-sub{
+  max-width:760px;margin:18px 0 0 80px;
+  color:var(--ink-soft);font-size:16.5px;
+}
+@media(max-width:720px){
+  .sec-sub{margin-left:0}
+  .sec-head{flex-direction:column;gap:8px;align-items:flex-start}
+  .sec-num{min-width:0}
+}
+
+/* ===== 六动作 ===== */
+.acts{
+  margin-top:56px;
+  display:grid;grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--line-strong);
+  border-left:1px solid var(--line);
+}
+.act{
+  border-right:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:30px 28px 34px;background:linear-gradient(180deg,rgba(255,255,255,.5),rgba(255,255,255,0));
+}
+.act b{
+  font-family:var(--sans);font-size:11.5px;letter-spacing:.2em;color:var(--muted);
+  display:block;margin-bottom:14px;
+}
+.act h3{margin:0 0 10px;font-size:19px;font-weight:600;letter-spacing:.02em}
+.act p{margin:0;font-size:14.5px;line-height:1.85;color:var(--muted)}
+
+/* ===== 知识地图 ===== */
+.map-note{
+  display:flex;flex-wrap:wrap;gap:22px;margin:26px 0 22px 94px;
+  font-family:var(--sans);font-size:12.5px;color:var(--muted);letter-spacing:.04em;
+}
+@media(max-width:720px){.map-note{margin-left:0}}
+.legend i{font-style:normal;color:var(--accent)}
+.table-scroll{overflow-x:auto;border:1px solid var(--line);background:rgba(255,255,255,.42)}
+table{border-collapse:collapse;width:100%;min-width:760px}
+.map-table{table-layout:fixed;min-width:980px}
+.map-table col.c1{width:56px}
+.map-table col.c2{width:158px}
+.map-table col.c3{width:210px}
+.map-table col.c4{width:auto}
+.map-table col.c5{width:150px}
+.map-table col.c6{width:114px}
+thead th{
+  font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted);
+  text-align:left;padding:16px 14px;border-bottom:1px solid var(--line-strong);
+  background:rgba(240,236,227,.7);white-space:nowrap;
+}
+tbody td{
+  padding:19px 14px;border-bottom:1px solid var(--line);
+  font-size:14.6px;line-height:1.75;vertical-align:top;color:var(--ink-soft);
+}
+tbody tr:last-child td{border-bottom:none}
+tbody tr{transition:background .2s}
+tbody tr:hover{background:rgba(255,255,255,.78)}
+td.num{font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+td.name{font-weight:600;color:var(--ink);font-size:15px;line-height:1.6}
+td.actx{color:var(--accent);font-size:13.8px}
+.tag{
+  display:inline-block;font-family:var(--sans);font-size:11px;letter-spacing:.08em;
+  padding:2px 8px;border-radius:2px;white-space:nowrap;
+}
+.tag.base{background:#e9e1d3;color:#5d5548}
+.tag.add{background:#f0dfd9;color:var(--accent)}
+caption{
+  caption-side:top;text-align:left;font-family:var(--sans);font-size:12px;
+  letter-spacing:.08em;color:var(--muted);padding:12px 2px 10px;
+}
+
+/* ===== 讲次时间线 ===== */
+.timeline{margin-top:52px;border-left:1px solid var(--line-strong);padding-left:0}
+.group{margin:0 0 12px}
+.group-title{
+  font-family:var(--sans);font-size:13px;letter-spacing:.18em;color:var(--green);
+  margin:44px 0 18px;padding-left:26px;text-transform:none;
+}
+.lect{
+  position:relative;
+  display:grid;grid-template-columns:74px 1fr 190px;gap:20px;
+  padding:16px 0 16px 26px;
+  border-bottom:1px dashed var(--line);
+  align-items:start;
+}
+.lect:last-child{border-bottom:none}
+.lect::before{
+  content:"";position:absolute;left:-4px;top:26px;
+  width:7px;height:7px;border-radius:50%;background:var(--accent);
+  box-shadow:0 0 0 4px var(--paper);
+}
+.lect .n{
+  font-family:var(--sans);font-size:12px;letter-spacing:.1em;color:var(--muted);padding-top:2px;
+}
+.lect h4{margin:0 0 4px;font-size:17px;font-weight:600;letter-spacing:.01em}
+.lect p{margin:0;font-size:14px;line-height:1.8;color:var(--muted)}
+.lect .actx{
+  font-family:var(--sans);font-size:12px;color:var(--accent);line-height:1.7;
+  border-left:1px solid var(--line);padding-left:16px;margin-top:2px;
+}
+@media(max-width:820px){
+  .lect{grid-template-columns:56px 1fr;gap:14px}
+  .lect .actx{grid-column:2;border-left:none;padding-left:0;color:var(--accent)}
+}
+
+/* ===== 双栏：研讨 / 考核 ===== */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:54px}
+@media(max-width:860px){.two-col{grid-template-columns:1fr;gap:44px}}
+.card{
+  border:1px solid var(--line);background:rgba(255,255,255,.55);
+  padding:32px 30px 34px;
+}
+.card h3{margin:0 0 16px;font-size:18px;font-weight:600;letter-spacing:.06em}
+.card h3 span{font-family:var(--sans);font-size:11.5px;letter-spacing:.2em;color:var(--accent);display:block;margin-bottom:10px}
+.card ul{margin:0;padding-left:1.1em}
+.card li{font-size:14.5px;line-height:1.85;color:var(--ink-soft);margin-bottom:8px}
+.card li::marker{color:var(--line-strong)}
+.assess{margin-top:6px}
+.item{margin-bottom:24px}
+.item-top{display:flex;justify-content:space-between;align-items:baseline;gap:18px;margin-bottom:9px}
+.item-top .lbl{font-size:14.5px;color:var(--ink-soft);line-height:1.7}
+.item-top .val{font-family:var(--sans);font-size:12.5px;color:var(--muted);letter-spacing:.06em;flex:none}
+.track{height:4px;background:#e6dfd2;position:relative}
+.track i{position:absolute;left:0;top:0;bottom:0;background:var(--accent);opacity:.65}
+.assess .sum{
+  display:flex;justify-content:space-between;
+  font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.1em;
+  border-top:1px solid var(--line);padding-top:12px;margin-top:28px;
+}
+
+/* ===== 导论课 ===== */
+.feat{
+  margin-top:54px;display:grid;grid-template-columns:1.15fr 1fr;gap:0;
+  border:1px solid var(--line);background:rgba(255,255,255,.55);
+}
+@media(max-width:860px){.feat{grid-template-columns:1fr}}
+.feat-media{position:relative;overflow:hidden;background:var(--paper-deep);min-height:420px}
+.feat-media img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.feat-body{padding:40px 38px 44px}
+.feat-body .eyebrow-sm{
+  font-family:var(--sans);font-size:11.5px;letter-spacing:.24em;color:var(--accent);margin:0 0 16px;
+}
+.feat-body h3{margin:0 0 18px;font-size:24px;font-weight:600;line-height:1.5}
+.feat-body p{margin:0 0 18px;font-size:15px;line-height:1.95;color:var(--ink-soft)}
+.feat-body dl{margin:22px 0 26px;border-top:1px solid var(--line)}
+.feat-body dl div{display:grid;grid-template-columns:88px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid var(--line)}
+.feat-body dt{font-family:var(--sans);font-size:12px;letter-spacing:.1em;color:var(--muted)}
+.feat-body dd{margin:0;font-size:14px;line-height:1.75;color:var(--ink-soft)}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--sans);font-size:13.5px;letter-spacing:.06em;
+  color:#fff;background:var(--ink);text-decoration:none;
+  padding:12px 22px;border-radius:2px;transition:background .25s,transform .25s;
+}
+.btn:hover{background:var(--accent);transform:translateY(-1px)}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line-strong);margin-left:10px}
+.btn.ghost:hover{border-color:var(--ink);background:transparent}
+
+/* ===== 材料 ===== */
+.mats{margin-top:50px;display:grid;grid-template-columns:1.25fr 1fr;gap:52px}
+@media(max-width:900px){.mats{grid-template-columns:1fr;gap:40px}}
+.mats table{min-width:0}
+.mats table thead th{letter-spacing:.1em}
+.mats td{padding:13px 12px;font-size:14px}
+.mats code{
+  font-family:ui-monospace,"SFMono-Regular",Consolas,monospace;
+  font-size:12.5px;color:var(--green);background:rgba(47,74,69,.07);
+  padding:2px 6px;border-radius:2px;
+}
+.build{margin-top:26px}
+pre{
+  margin:0 0 14px;padding:20px 22px;
+  background:#221f1a;color:#e9dfcf;border-radius:2px;
+  font-family:ui-monospace,"SFMono-Regular",Consolas,monospace;
+  font-size:12.8px;line-height:1.85;overflow-x:auto;
+}
+pre .c{color:#8f8574}
+pre b{color:#e7c9a2;font-weight:400}
+.note{
+  font-size:14px;color:var(--muted);line-height:1.9;
+  border-left:2px solid var(--line-strong);padding-left:16px;margin-top:22px;
+}
+
+/* ===== 页脚 ===== */
+footer{background:#221f1a;color:#cfc5b4;padding:64px 0 54px}
+.foot-inner{max-width:var(--max);margin:0 auto;padding:0 28px;display:grid;grid-template-columns:1.4fr 1fr;gap:40px}
+@media(max-width:760px){.foot-inner{grid-template-columns:1fr;gap:28px}}
+footer .mark{font-family:var(--serif);font-size:20px;color:#f1e8d8;letter-spacing:.06em;margin:0 0 14px}
+footer p{font-family:var(--sans);font-size:12.5px;line-height:2.0;color:#a99f8e;margin:0 0 8px}
+footer a{color:#e0d3bd;text-decoration:none;border-bottom:1px solid rgba(224,211,189,.35)}
+footer a:hover{border-bottom-color:#e0d3bd}
+footer .tail{
+  max-width:var(--max);margin:44px auto 0;padding:18px 28px 0;
+  border-top:1px solid rgba(207,197,180,.16);
+  font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;color:#8c8373;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+}
+
+/* ===== 响应式 ===== */
+@media(max-width:860px){
+  .wrap,.topbar-inner,.hero-inner,.foot-inner,.tail{padding-left:20px;padding-right:20px}
+  section{padding:64px 0}
+  .hero-inner{padding-top:86px;padding-bottom:62px}
+  .acts{grid-template-columns:1fr 1fr}
+  .act{padding:26px 24px 30px}
+  .feat-body{padding:30px 24px 34px}
+  .card{padding:26px 22px 30px}
+  .lect{grid-template-columns:58px 1fr}
+  .timeline{padding-left:0}
+}
+@media(max-width:560px){
+  .acts{grid-template-columns:1fr}
+  .hero h1{font-size:34px}
+  .hero h1 em{font-size:16px;margin-top:16px}
+  .hero-lead{font-size:15.5px;padding-left:16px;margin-top:26px}
+  .meta{margin-top:32px;gap:8px}
+  .meta span{font-size:12px;padding:4px 10px}
+  h2{font-size:23px}
+  .sec-sub{font-size:15.5px;margin-top:14px}
+  td.name{font-size:14.5px}
+  .item-top .lbl{font-size:13.5px}
+}
+
+/* ===== 动效 ===== */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .8s cubic-bezier(.22,.61,.36,1),transform .8s cubic-bezier(.22,.61,.36,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+
+/* ===== 打印 ===== */
+@media print{
+  .topbar,.hero-scrim,.hero-img,footer{display:none}
+  body{background:#fff;font-size:11pt}
+  .hero{background:#fff;color:#000;border:none}
+  .hero-inner{padding:24px 0;color:#000}
+  .hero h1{color:#000}
+  .hero h1 em,.hero-lead,.meta span{color:#000}
+  section{page-break-inside:avoid;padding:24px 0}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== 顶栏 ===== -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#top">产业组织理论 <span>·</span> 知识创造</a>
+    <nav class="nav" aria-label="页面导航">
+      <a href="#method">方法</a>
+      <a href="#map">知识地图</a>
+      <a href="#lectures">讲次</a>
+      <a href="#assess">研讨与考核</a>
+      <a href="#intro">导论课</a>
+      <a href="#materials">材料</a>
+    </nav>
+  </div>
+</div>
+
+<!-- ===== 首屏 ===== -->
+<header class="hero" id="top">
+  <div class="hero-img" role="img" aria-label="十九世纪版画：山谷中两眼矿泉汇向山下的集市"></div>
+  <div class="hero-scrim"></div>
+  <div class="hero-inner">
+    <p class="eyebrow">Industrial Organization · Course Home</p>
+    <h1>产业组织理论
+      <em>不按章节平铺，按十一次知识创造走一遍</em>
+    </h1>
+    <p class="hero-lead">
+      学生记住了古诺、伯特兰、霍特林，却常常不知道它们从哪里来、为什么互相取代、遇到新问题时从哪里下手。
+      这门课把每条理论线还原成一次创造：先有一个没人回答的问题，再有被仔细删减的假设，然后才是结论。
+    </p>
+    <div class="meta">
+      <span>32 学时 · 16 讲</span>
+      <span>11 条线索</span>
+      <span>研讨式</span>
+      <span>知识创造卡片</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ===== 一、方法 ===== -->
+<section id="method">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">一 / 方法</div>
+      <h2>知识不是背下来的，是走出来的六步</h2>
+    </div>
+    <p class="sec-sub">
+      第 1 讲以古诺 1838 年的矿泉为范例，把六个动作完整走一遍；此后每条线索都按同一顺序复述。
+      学生学完一条线索，要能说清这条路径，并且自己走一遍——不是复述结论，而是复述选择。
+    </p>
+
+    <div class="acts">
+      <div class="act">
+        <b>01</b>
+        <h3>发现空白</h3>
+        <p>指出哪一个问题还没有答案，或者哪一个通行结论解释不了眼前观察到的现象。空白是起点，不是背景介绍。</p>
+      </div>
+      <div class="act">
+        <b>02</b>
+        <h3>设定假设</h3>
+        <p>决定保留什么、删掉什么，并为每一次删减给出理由。删得越狠，结论越锋利，也越容易被现实顶翻。</p>
+      </div>
+      <div class="act">
+        <b>03</b>
+        <h3>形式推演</h3>
+        <p>把机制写成可以逐步检验的形式：反应函数、均衡条件、比较静态。说不清的直觉，在这里会被逼着说清。</p>
+      </div>
+      <div class="act">
+        <b>04</b>
+        <h3>对照定位</h3>
+        <p>把新结论与垄断、完全竞争、已有模型并排放，看它在哪个坐标上、差别出在哪一条假设上。</p>
+      </div>
+      <div class="act">
+        <b>05</b>
+        <h3>接受批判</h3>
+        <p>面对反例和替代解释，先问它攻击的是哪条假设，再判断这一击是否致命。伯特兰正是这样一击。</p>
+      </div>
+      <div class="act">
+        <b>06</b>
+        <h3>推广一般化</h3>
+        <p>换条件再推一次：厂商从两家变成 n 家，行为从同时变成先后，结论的边界就显出来了。</p>
+      </div>
+    </div>
+
+    <p class="note">
+      在此之上还有五种学科层面的动作，用来解释一条线索如何长成另一个方向：更换分析单位、把外生变内生、
+      创造测量工具、回应经验反常与新现象、换范式。全课统一用「知识创造卡片」记录，八个栏目——
+      空白、假设、推演、对照、批评、推广、未解问题、我能做什么——每个模块至少一张。
+    </p>
+  </div>
+</section>
+
+<!-- ===== 二、知识地图 ===== -->
+<section id="map">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">二 / 地图</div>
+      <h2>十一条线索：四条来自教材，七条是补上的</h2>
+    </div>
+    <p class="sec-sub">
+      通常的产业组织教材覆盖了前四条：策略互动、结构—行为—绩效、产品差异与定价、创新动态。
+      但一条完整的知识地图还缺企业边界、信息、进入与沉没成本、芝加哥批评、经验研究、新前沿，以及贯穿全课的范式之争。
+      把这些补上，学生才能看到这门学科真正的问题域，而不只是一串模型。
+    </p>
+    <div class="map-note">
+      <span class="legend"><i>●</i> 通常教材已覆盖</span>
+      <span class="legend"><i>○</i> 本课程补充</span>
+      <span>年份为通行标注，编写讲义时逐条核对</span>
+    </div>
+
+    <div class="table-scroll">
+      <table class="map-table">
+        <colgroup>
+          <col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"><col class="c6">
+        </colgroup>
+        <caption>表 1　产业组织理论的知识地图（11 条线索）</caption>
+        <thead>
+          <tr><th>编号</th><th>线索</th><th>起点问题</th><th>关键节点</th><th>主导的创造动作</th><th>来源</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="num">01</td><td class="name">策略互动</td>
+            <td>少数几家相互牵制，价格和产量停在哪里</td>
+            <td>古诺 1838、伯特兰 1883、霍特林 1929、斯塔克尔伯格 1934、纳什 1950；进入阻挠、限制性定价、声誉</td>
+            <td class="actx">改一条假设</td><td><span class="tag base">● 已有</span></td></tr>
+          <tr><td class="num">02</td><td class="name">结构—行为—绩效</td>
+            <td>集中是否损害绩效，政府能否据此干预</td>
+            <td>Mason 1939、Bain 1951/1956；集中度、赫芬达尔指数、勒纳指数；「集中—利润」关系不稳健的批评</td>
+            <td class="actx">创造测量工具</td><td><span class="tag base">● 已有</span></td></tr>
+          <tr><td class="num">03</td><td class="name">产品差异与定价</td>
+            <td>去掉同质假设后，企业靠什么竞争</td>
+            <td>张伯伦 1933、霍特林 1929、Lancaster 1966、Dixit 与 Stiglitz 1977；歧视定价、广告、转换成本、网络效应、捆绑</td>
+            <td class="actx">更换分析单位</td><td><span class="tag base">● 已有</span></td></tr>
+          <tr><td class="num">04</td><td class="name">创新动态</td>
+            <td>市场结构与创新，谁决定谁</td>
+            <td>熊彼特 1912/1942、Arrow 1962、Schmookler 1966；专利、研发溢出；Aghion 等 2005；兼并重组；Nelson 与 Winter 1982、Klepper 1996</td>
+            <td class="actx">把静态换成动态</td><td><span class="tag base">● 已有 · 补演化</span></td></tr>
+          <tr><td class="num">05</td><td class="name">企业边界与纵向关系</td>
+            <td>为什么会有企业，边界在哪，上下游怎样定价</td>
+            <td>Coase 1937、Spengler 1950、Williamson 1975、Grossman 与 Hart 1986；纵向约束</td>
+            <td class="actx">更换分析单位：从市场到交易</td><td><span class="tag add">○ 补充</span></td></tr>
+          <tr><td class="num">06</td><td class="name">信息</td>
+            <td>信息不对称时市场还存在吗</td>
+            <td>Stigler 1961、Akerlof 1970、Spence 1973、Rothschild 与 Stiglitz 1976</td>
+            <td class="actx">外生变内生：信息</td><td><span class="tag add">○ 补充</span></td></tr>
+          <tr><td class="num">07</td><td class="name">进入、退出与沉没成本</td>
+            <td>市场结构是给定的，还是竞争的结果</td>
+            <td>Bain 1956、Stigler 1968、Baumol 等 1982、Sutton 1991</td>
+            <td class="actx">外生变内生：结构</td><td><span class="tag add">○ 补充</span></td></tr>
+          <tr><td class="num">08</td><td class="name">芝加哥批评与反垄断规制</td>
+            <td>凭什么干预，由谁干预</td>
+            <td>Stigler、Demsetz 1973、Posner 1976、Bork 1978；规制俘获 1971；激励规制（Laffont 与 Tirole 1993）</td>
+            <td class="actx">批评升级为学派</td><td><span class="tag add">○ 补充</span></td></tr>
+          <tr><td class="num">09</td><td class="name">经验研究与实验</td>
+            <td>怎样知道理论说的是真的</td>
+            <td>张伯伦的课堂实验 1948、Smith 1962、Fouraker 与 Siegel 1963；新经验产业组织；BLP 1995；行为产业组织</td>
+            <td class="actx">经验反常驱动</td><td><span class="tag add">○ 补充</span></td></tr>
+          <tr><td class="num">10</td><td class="name">新前沿</td>
+            <td>新现象提出哪些新问题</td>
+            <td>双边市场（Rochet 与 Tirole 2003）；拍卖与市场设计；相互倾销 1980、战略性贸易政策 1985；产业政策</td>
+            <td class="actx">回应新现象、移植工具</td><td><span class="tag add">○ 补充</span></td></tr>
+          <tr><td class="num">11</td><td class="name">范式之争（暗线）</td>
+            <td>主流范式看不到什么</td>
+            <td>Galbraith 1952；卡莱茨基的垄断程度；Baran 与 Sweezy 1966；Eichner 1976</td>
+            <td class="actx">换范式</td><td><span class="tag add">○ 补充</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">
+      这条暗线贯穿全课：哈佛与芝加哥、主流范式与制度主义、垄断资本学派之间的争论提醒学生——
+      理论选择不只是判断哪个更对，还涉及看什么、不看什么。
+    </p>
+  </div>
+</section>
+
+<!-- ===== 三、讲次 ===== -->
+<section id="lectures">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">三 / 讲次</div>
+      <h2>十六讲：先看行为，再看结构，最后是时间与方法</h2>
+    </div>
+    <p class="sec-sub">
+      顺序是：竞争的行为 → 结构与政策 → 企业与信息 → 时间中的产业 → 怎样知道 → 前沿与范式。
+      每讲给出核心内容与当讲训练的创造动作；课前的学生任务写在讲义里，课上只做三件事——纠正史实、追问假设、把讨论引回未解问题。
+    </p>
+
+    <div class="timeline">
+      <p class="group-title">模块一　导论</p>
+      <div class="lect">
+        <span class="n">第 1 讲</span>
+        <div><h4>从一个模型看知识如何被造出来</h4><p>古诺模型的完整推演；六个动作；课程地图；知识创造卡片的填法</p></div>
+        <div class="actx">六个动作的整体认知</div>
+      </div>
+
+      <p class="group-title">模块二　竞争的行为</p>
+      <div class="lect">
+        <span class="n">第 2 讲</span>
+        <div><h4>同质产品下的产量竞争</h4><p>假设、反应函数、均衡；与垄断和完全竞争对照；n 家厂商的推广；推测变差</p></div>
+        <div class="actx">设定假设 · 对照定位</div>
+      </div>
+      <div class="lect">
+        <span class="n">第 3 讲</span>
+        <div><h4>价格、位置与先后</h4><p>伯特兰悖论；霍特林的线性城市；斯塔克尔伯格的领导者模型</p></div>
+        <div class="actx">接受批判 · 改一条假设</div>
+      </div>
+      <div class="lect">
+        <span class="n">第 4 讲</span>
+        <div><h4>策略性行为</h4><p>进入阻挠、限制性定价、声誉与掠夺性定价；案例研讨</p></div>
+        <div class="actx">把静态换成动态（初步）</div>
+      </div>
+      <div class="lect">
+        <span class="n">第 5 讲</span>
+        <div><h4>产品差异</h4><p>垄断竞争；特征方法；多样性偏好；需求估计的基本思想</p></div>
+        <div class="actx">更换分析单位</div>
+      </div>
+      <div class="lect">
+        <span class="n">第 6 讲</span>
+        <div><h4>定价与产品策略</h4><p>歧视定价；广告；转换成本；网络效应与标准；捆绑</p></div>
+        <div class="actx">更换分析单位 · 推广一般化</div>
+      </div>
+
+      <p class="group-title">模块三　结构、绩效与政策</p>
+      <div class="lect">
+        <span class="n">第 7 讲</span>
+        <div><h4>结构—行为—绩效</h4><p>哈佛学派；测量指标；经验规律及其批评</p></div>
+        <div class="actx">创造测量工具</div>
+      </div>
+      <div class="lect">
+        <span class="n">第 8 讲</span>
+        <div><h4>结构从哪里来</h4><p>进入壁垒；可竞争市场；内生沉没成本</p></div>
+        <div class="actx">外生变内生</div>
+      </div>
+      <div class="lect">
+        <span class="n">第 9 讲</span>
+        <div><h4>芝加哥批评与反垄断</h4><p>效率解释；规制俘获；反垄断的执法标准；案例研讨</p></div>
+        <div class="actx">批评升级为学派</div>
+      </div>
+      <div class="lect">
+        <span class="n">第 10 讲</span>
+        <div><h4>规制与激励规制</h4><p>回报率规制；激励规制；政策案例研讨</p></div>
+        <div class="actx">接受批判 · 对照定位</div>
+      </div>
+
+      <p class="group-title">模块四　企业、合约与信息</p>
+      <div class="lect">
+        <span class="n">第 11 讲</span>
+        <div><h4>企业边界与纵向关系</h4><p>交易成本；资产专用性；不完全合约；双重加价与纵向约束</p></div>
+        <div class="actx">更换分析单位</div>
+      </div>
+      <div class="lect">
+        <span class="n">第 12 讲</span>
+        <div><h4>信息与市场</h4><p>搜寻；柠檬市场；信号；筛选；与歧视定价和广告的联系</p></div>
+        <div class="actx">外生变内生</div>
+      </div>
+
+      <p class="group-title">模块五　时间中的产业</p>
+      <div class="lect">
+        <span class="n">第 13 讲</span>
+        <div><h4>创新与市场结构</h4><p>熊彼特；阿罗的替代效应；专利；研发溢出；竞争与创新的倒 U 形关系</p></div>
+        <div class="actx">把静态换成动态</div>
+      </div>
+      <div class="lect">
+        <span class="n">第 14 讲</span>
+        <div><h4>演化、生命周期与兼并</h4><p>惯例与搜寻；产业生命周期；兼并重组与创新</p></div>
+        <div class="actx">把静态换成动态 · 推广一般化</div>
+      </div>
+
+      <p class="group-title">模块六　怎样知道</p>
+      <div class="lect">
+        <span class="n">第 15 讲</span>
+        <div><h4>经验研究与实验</h4><p>结构—行为—绩效回归的局限；新经验产业组织；需求估计；课堂实验；行为产业组织</p></div>
+        <div class="actx">经验反常驱动</div>
+      </div>
+
+      <p class="group-title">模块七　前沿与范式</p>
+      <div class="lect">
+        <span class="n">第 16 讲</span>
+        <div><h4>平台、市场设计、产业政策</h4><p>双边市场；拍卖；开放经济中的产业组织；产业政策；范式之争</p></div>
+        <div class="actx">回应新现象 · 换范式</div>
+      </div>
+      <div class="lect">
+        <span class="n">课末</span>
+        <div><h4>汇报：学生自己的「一次知识创造」</h4><p>改一条假设或换一个分析单位，写出推演、对照与局限</p></div>
+        <div class="actx">综合运用</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 四、研讨与考核 ===== -->
+<section id="assess">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">四 / 研讨</div>
+      <h2>研讨不是发言，是一次分工明确的批评</h2>
+    </div>
+    <p class="sec-sub">
+      每个模块配一次研讨，形式固定：课前读一篇文献并填好卡片；课上两组汇报，另一组专门负责批评；
+      教师只纠正史实、追问假设、把讨论引回未解问题。
+    </p>
+
+    <div class="two-col">
+      <div class="card">
+        <h3><span>研讨设计</span>每个模块一次，八个主题</h3>
+        <ul>
+          <li><strong>同质品行业的产量竞争</strong>　选一个产品差异很小的行业，判断它更接近古诺、伯特兰还是斯塔克尔伯格。</li>
+          <li><strong>定价策略比较</strong>　同一企业在不同渠道、不同时间定价不同，属于哪一类价格歧视，需要哪些信息条件。</li>
+          <li><strong>一项反垄断决定的依据</strong>　它依据结构标准还是行为标准，芝加哥学派的批评是否成立。</li>
+          <li><strong>规制方案设计</strong>　为一个自然垄断环节设计激励规制方案，并说明它依赖哪些信息前提。</li>
+          <li><strong>纵向一体化的理由</strong>　某企业并购上下游，是为了效率还是为了封锁。</li>
+          <li><strong>专利制度的两难</strong>　加强专利保护，对创新是促进还是阻碍。</li>
+          <li><strong>重做一次检验</strong>　选一个已有的经验结论，讨论它的识别策略与可能偏误。</li>
+          <li><strong>平台定价</strong>　一边免费、另一边收费，怎样用双边市场模型解释。</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3><span>考核构成（建议）</span>以产出定成绩</h3>
+        <div class="assess">
+          <div class="item">
+            <div class="item-top"><span class="lbl">知识创造卡片　不少于八张</span><span class="val">30%</span></div>
+            <div class="track"><i style="width:30%"></i></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><span class="lbl">课堂研讨　两次主讲、一次批评</span><span class="val">20%</span></div>
+            <div class="track"><i style="width:20%"></i></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><span class="lbl">期末项目　一次知识创造</span><span class="val">40%</span></div>
+            <div class="track"><i style="width:40%"></i></div>
+          </div>
+          <div class="item">
+            <div class="item-top"><span class="lbl">课堂实验参与与实验记录</span><span class="val">10%</span></div>
+            <div class="track"><i style="width:10%"></i></div>
+          </div>
+          <div class="sum"><span>合计</span><span>100%</span></div>
+        </div>
+        <p class="note" style="margin-top:26px">
+          期末项目二选一：改一条假设或换一个分析单位，写出推演、对照与局限；或对一个现实行业做出有证据的产业组织分析。
+          评分看的不是结论新不新，而是空白找得准不准、假设删得有没有理由。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 五、导论课 ===== -->
+<section id="intro">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">五 / 导论</div>
+      <h2>第 1 讲：从 1838 年的两眼矿泉开始</h2>
+    </div>
+    <p class="sec-sub">
+      古诺的《关于财富理论的数学原理研究》用了一个极简的场景：山谷里两眼矿泉，水一样，成本几乎为零，
+      两位泉主各自定价。这个模型后来被伯特兰一击、被斯塔克尔伯格改写、被纳什一般化，
+      但它的价值不在结论，而在它示范了「怎样把一个模糊的商业直觉变成可以推演的结构」。
+    </p>
+
+    <div class="feat">
+      <div class="feat-media">
+        <img src="assets/springs.jpg" alt="两眼矿泉与石槽的示意：村民提壶走向泉边，两棵树形路牌立在泉旁" loading="lazy">
+      </div>
+      <div class="feat-body">
+        <p class="eyebrow-sm">配套课件 · 14 页</p>
+        <h3>《古诺模型：重走一次知识创造》</h3>
+        <p>
+          按六个动作组织的完整一节课：先看 1838 年的空白，再逐条拆开假设，推出反应函数与均衡，
+          与垄断、完全竞争并排定位，然后用伯特兰的批评把模型顶翻，最后推广到 n 家厂商与推测变差。
+        </p>
+        <dl>
+          <div><dt>页序</dt><dd>矿泉场景 → 空白 → 假设 → 推演 → 对照 → 批判 → 推广 → 课堂任务</dd></div>
+          <div><dt>含</dt><dd>反应曲线图、n 家厂商曲线、三行对照表、时间线、课堂任务页，每页附讲稿备注</dd></div>
+          <div><dt>用于</dt><dd>第 1 讲整节；第 2、3 讲可复用其中的推演与批判部分</dd></div>
+        </dl>
+        <a class="btn" href="https://my.feishu.cn/slides/IY8xsK4oxlVWAEd3xUhcWvThn2g" target="_blank" rel="noopener">打开在线课件</a>
+        <a class="btn ghost" href="#materials">看构建脚本</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 六、材料 ===== -->
+<section id="materials">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">六 / 材料</div>
+      <h2>整套材料可复现，也留了提示词</h2>
+    </div>
+    <p class="sec-sub">
+      仓库里不只有成品，还有生成它们的脚本与提示词——大纲是一段 python-docx 脚本生成的，
+      课件是 SML 单页 XML 加图表脚本生成的。学生若要自己做一份，路径是通的。
+    </p>
+
+    <div class="mats">
+      <div>
+        <div class="table-scroll">
+          <table>
+            <caption>表 2　仓库结构</caption>
+            <thead><tr><th>路径</th><th>内容</th></tr></thead>
+            <tbody>
+              <tr><td><code>docs/01-课程大纲.docx</code></td><td>十章大纲：定位、目标、知识地图、16 讲、方法、研讨、考核、文献</td></tr>
+              <tr><td><code>docs/02-知识地图与遗漏分析.md</code></td><td>四条已有线索、遗漏五类、七条补充线索的完整论证</td></tr>
+              <tr><td><code>docs/03-古诺模型讲解.md</code></td><td>导论课正文：推导、对照、伯特兰批判、n 家推广、课堂任务与参考答案</td></tr>
+              <tr><td><code>slides/</code></td><td>14 页课件的页序、14 个单页 XML、生成脚本、事实依据记录、配图</td></tr>
+              <tr><td><code>scripts/build_syllabus.py</code></td><td>生成课程大纲 Word 的脚本</td></tr>
+              <tr><td><code>prompts/</code></td><td>三份可复用提示词：导论课课件、知识地图、课程大纲</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="build">
+        <p class="eyebrow-sm" style="font-family:var(--sans);font-size:11.5px;letter-spacing:.24em;color:var(--accent);margin:0 0 14px">复现大纲</p>
+        <pre><span class="c"># 依赖</span>
+python -m pip install python-docx
+<span class="c"># 生成</span>
+python scripts/build_syllabus.py</pre>
+        <p class="eyebrow-sm" style="font-family:var(--sans);font-size:11.5px;letter-spacing:.24em;color:var(--accent);margin:0 0 14px">复现课件</p>
+        <pre>python slides/build/build_chart.py   <span class="c"># 图表</span>
+python slides/build/build_all.py     <span class="c"># 逐页写入</span></pre>
+        <p class="note">
+          课件走飞书 Slides，需要 <code>lark-cli</code> 与对应账号权限；
+          仓库里的脚本已把 deck id 与图片 file_token 换成占位符，重跑前需先上传配图换回真实 token。
+        </p>
+        <p class="note">
+          大纲与课件中的年份、文献为通行标注，编写讲义前应逐条核对版本与出处。配图为课堂示意，不冒充历史图像。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== 页脚 ===== -->
+<footer>
+  <div class="foot-inner">
+    <div>
+      <p class="mark">产业组织理论 · 以知识创造为主线</p>
+      <p>课程大纲为草案：学时、适用对象与考核比例可按培养方案调整。学时不足时压缩第 10 讲与第 14 讲，保留每条线索的起点问题、关键假设与主要批评。</p>
+      <p>材料版权归作者，引用请注明来源。</p>
+    </div>
+    <div>
+      <p>仓库　<a href="https://github.com/youxuels/industrial-economics" target="_blank" rel="noopener">youxuels / industrial-economics</a></p>
+      <p>课件　<a href="https://my.feishu.cn/slides/IY8xsK4oxlVWAEd3xUhcWvThn2g" target="_blank" rel="noopener">古诺模型：重走一次知识创造</a></p>
+      <p>读法　建议按讲次顺序读；只想看方法，从第一节的六个动作开始。</p>
+    </div>
+  </div>
+  <div class="tail">
+    <span>知识创造 · 产业组织理论课程主页</span>
+    <span>Cournot 1838 — Nash 1950 — Platform 2003</span>
+  </div>
+</footer>
+
+<script>
+/* 滚动渐显 */
+(function(){
+  var els = document.querySelectorAll('.sec-sub, .act, .timeline, .card, .feat, .mats, .table-scroll, .note');
+  if(!('IntersectionObserver' in window)){ return; }
+  els.forEach(function(el){ el.classList.add('reveal'); });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {rootMargin:'0px 0px -12% 0px', threshold:0.08});
+  els.forEach(function(el){ io.observe(el); });
+})();
+
+/* 导航高亮 */
+(function(){
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav a'));
+  var map = links.map(function(a){
+    return {link:a, sec:document.querySelector(a.getAttribute('href'))};
+  }).filter(function(x){ return x.sec; });
+  function update(){
+    var y = window.scrollY + 120, current = null;
+    map.forEach(function(x){ if(x.sec.offsetTop <= y) current = x; });
+    links.forEach(function(a){ a.removeAttribute('aria-current'); });
+    if(current) current.link.setAttribute('aria-current','true');
+    else if(window.scrollY < 300) links[0].removeAttribute('aria-current');
+  }
+  var ticking = false;
+  window.addEventListener('scroll', function(){
+    if(ticking) return; ticking = true;
+    window.requestAnimationFrame(function(){ update(); ticking = false; });
+  }, {passive:true});
+  update();
+})();
+</script>
+</body>
+</html>
